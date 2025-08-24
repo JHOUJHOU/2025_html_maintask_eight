@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>登入頁</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script type="module" crossorigin src="/2025_html_maintask_eight/assets/main-9747274f.js"></script>
-    <link rel="stylesheet" href="/2025_html_maintask_eight/assets/main-da782181.css">
+    <script type="module" crossorigin src="/2025_html_maintask_eight/assets/main-a3182d58.js"></script>
+    <link rel="stylesheet" href="/2025_html_maintask_eight/assets/main-6b35be3e.css">
   </head>
   <body>
     
@@ -35,7 +35,7 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-        <div class="w-3/5">
+        <div class="xl:w-3/5 w-full xl:py-0 py-15">
           <div class="grid grid-cols-1 xl:grid-cols-12 gap-4">
             <div class="xl:col-span-3 col-span-0"></div>
             <div class="xl:col-span-6 col-span-12">
@@ -54,6 +54,64 @@
                   <span class="text-black-80 text-base flex-1 text-center">使用 Apple 帳號登入</span>
                 </button>
                 <h2 class="mb-4 text-black-100 text-title-base">或使用 ZOBAA 帳號登入</h2>
+                <div class="mb-4 w-full">
+                  <label for="email" class="text-black-80 text-base mb-2">
+                    電子信箱 <span class="text-alert-100 text-base">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    value="jessicadesigner@gmail.com"
+                    class="w-full p-4 bg-white-0 border border-black-40 rounded-xl text-black-800 text-base email-input"
+                    placeholder="請輸入您的電子信箱"
+                  />
+                </div>
+                <div class="mb-2 w-full">
+                  <div class="relative">
+                    <label for="password" class="text-black-80 text-base mb-2">
+                    密碼 <span class="text-alert-100 text-base">*</span>
+                    </label>
+                    <input 
+                      type="password" 
+                      id="password2" 
+                      class="w-full p-4 bg-white-0 border border-black-40 rounded-xl text-black-800 text-base passwordInput"
+                      placeholder="請輸入密碼"
+                    />
+                    <button 
+                      type="button" 
+                      id="togglePassword" 
+                      class="absolute right-[16px] top-1/2 text-black-60 hover:text-black-100 hidden togglePassword"
+                    >
+                      <span class="material-symbols-outlined">
+                        visibility_off
+                      </span>
+                    </button>
+                  </div> 
+                </div>
+                <div class="w-full flex justify-between items-center xl:mb-10 mb-6">
+                  <div class="flex items-center">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" name="todo[1]" class="sr-only peer" checked>
+                      <div class="w-6 h-6 bg-gray-200 border-2 border-gray-400 rounded peer-checked:bg-[#4A3830] peer-checked:border-[#FFFFFF] flex items-center justify-center transition-all">
+                          <svg class="w-4 h-4" fill="#ffffff" viewBox="0 0 24 24">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                          </svg>
+                      </div>
+                      <span class="ml-2 text-black-80 text-base">記住帳號</span>
+                  </label>
+                  </div>
+                  <div>
+                    <a href="#" class="text-black-80 text-base">忘記密碼？</a>
+                  </div>
+                </div>
+                <button type="button" class="w-full text-black-60 bg-black-40 rounded-xl py-4 xl:mb-10 mb-6 hover:bg-primary-120 hover:text-white-0 change-btn">
+                  立即登入
+                </button>
+                <div class="flex justify-flex-start items-center mr-2">
+                  <p class="text-black-80 text-base">沒有 ZOBAA 帳號嗎？</p>
+                  <a href="./signup.html" class="text-primary-100 text-base font-poppins font-semibold underline underline-offset-1">立即註冊</a>
+                </div>
               </div>
             </div>
             <div class="xl:col-span-3 col-span-0"></div>
