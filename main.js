@@ -79,3 +79,64 @@ const swiper3 = new Swiper('.mySwiper3', {
     }
   }
 });
+
+const passwordInputs = document.querySelectorAll('.passwordInput');
+const toggleButtons = document.querySelectorAll('.togglePassword');
+const emailInput = document.querySelector(".email-input");
+const changeBtn = document.querySelector(".change-btn");
+
+
+toggleButtons.forEach((btn, index) => {
+  const input = passwordInputs[index];
+  const icon = btn.querySelector("span");
+
+
+  input.addEventListener("input", () => {
+    if (input.value.length > 0) {
+      btn.classList.remove("hidden");
+    } else {
+      btn.classList.add("hidden");
+      input.type = "password";
+      icon.textContent = "visibility_off";
+    }
+  });
+
+
+  btn.addEventListener("click", () => {
+    if (input.type === "password") {
+      input.type = "text";
+      icon.textContent = "visibility";
+    } else {
+      input.type = "password";
+      icon.textContent = "visibility_off";
+    }
+  });
+});
+
+
+emailInput.addEventListener("input", () => {
+  toggleSubmitButton();
+});
+
+
+passwordInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    toggleSubmitButton();
+  });
+});
+
+
+function toggleSubmitButton() {
+  const hasEmail = emailInput.value.trim() !== "";
+  const hasPassword = Array.from(passwordInputs).some(
+    (input) => input.value.trim() !== ""
+  );
+
+  if (hasEmail && hasPassword) {
+    changeBtn.classList.add("bg-primary-100", "text-white-0");
+    changeBtn.classList.remove("bg-black-40", "text-black-60");
+  } else {
+    changeBtn.classList.add("bg-black-40", "text-black-60");
+    changeBtn.classList.remove("bg-primary-100", "text-white-0");
+  }
+}
