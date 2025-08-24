@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 大阪 - 分頁樣式 */
+.mySwiper .swiper-pagination {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 0.25rem; 
+  padding-left: 12px;
+  padding-bottom: 12px;
+
+}
+.mySwiper .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  background-color: #FFFFFF !important;
+  transition: all 0.3s ease !important;
+  opacity: 1 !important;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 100px !important;
+  background-color: #4A3830 !important;
+  opacity: 1;
+}
+
+/* 大阪 TOP 10!  */
+.swiper-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible; /* 或者省略，預設就是 visible */
+}
+.swiper-button-next-cus {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-right: -84px;
+  color: black;
+  background: white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  cursor: pointer;
+}
+.swiper-button-prev-cus {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-left: -84px;
+  color: black;
+  background: white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari and Opera */
+}
+
+/* 登入註冊 - 分頁樣式 */
+.mySwiper3 .swiper-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.25rem; 
+  padding-bottom: 24px;
+
+}
+.mySwiper3 .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  background-color: #ECECEC !important;
+  transition: all 0.3s ease !important;
+  opacity: 1 !important;
+}
+.mySwiper3 .swiper-pagination-bullet-active {
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 100px !important;
+  background-color: #CBB6AF !important;
+  opacity: 1;
+}
